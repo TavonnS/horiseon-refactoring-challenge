@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+
+/* I changed .header to nav below */
+nav {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+/* I changed .header to nav below */
+nav h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/* I changed .header to nav below, and changed the class selector '.seo' to span.  I also changed the color property to yellow to confirm change was applied */
+nav h1 span {
+    color: #a9b615;
+}
+
+/* The following three CSS selectors use a div tag which refers to the div element nested inside the nav element.  Note .header has become nav  */
+nav div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+nav div ul {
+    list-style-type: none;
+}
+
+nav div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* I changed the .hero class selector to 'nav + img', the adjacent sibling selector, to select only the imgage directly following the nav element */
+nav + img {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* the float class selectors were changed to an element selctor for all the images within the section element.  To preserve the right-side placed second image,
+I made a special selector using the nth child property (for the image within the second child article in the section element) and floated it on the right */
+section img {
+    float: left;
+    margin-right: 25px;
+    max-height: 200px;
+}
+
+section article:nth-child(2) img {
+    float: right;
+    margin-left: 25px;
+}
+
+/* .content class selector changed to section element selector */
+section {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* .benefits class selector changed to aside element selector */
+aside {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+/* Some of the following CSS selectors have reduced multiple rules to one where possible */
+/* Selecting all articles within aside element: */
+aside article {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* To select all headers in aside element: */
+aside article h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* To select all images in aside element: */
+aside article img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/* Rule for all articles within section element: */
+section article {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* to select headers in section element: */
+section article h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+
+/* I removed the class from footer to make this CSS selector below simply "footer" */
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+/* Here I also removed the class footer and rewrote it to select the header within the footer element */
+footer h6 {
+    font-size: 20px;
+}
+/* I changed h2 to h6 in the footer header selector above, but left the font size at 20px */
